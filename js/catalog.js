@@ -43,9 +43,9 @@ function addSelectedItemToCart() {
 
 } // end function addSelectedItemToCart
 
-// TODO: Save the contents of the cart to Local Storage
+// Done: Save the contents of the cart to Local Storage
 function saveCartToLocalStorage() {
-
+  localStorage.setItem('busMallCart', JSON.stringify(Cart.currentCart));
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
