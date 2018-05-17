@@ -32,7 +32,7 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+// Done: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // Done: suss out the item picked from the select list
   var addItem = event.target.items.value;
@@ -48,8 +48,11 @@ function saveCartToLocalStorage() {
   localStorage.setItem('busMallCart', JSON.stringify(Cart.currentCart));
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+// Done: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+  var cartCount = document.getElementById('itemCount'); 
+  cartCount.textContent = JSON.parse(localStorage.getItem('busMallCart')).length; 
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
