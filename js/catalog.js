@@ -63,17 +63,16 @@ function updateCounter() {
 // Done: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   	// Done: Get the item and quantity from the form
-		var divEl = document.getElementById("cartContents");
-		var ulEl = document.createElement("ul");
-		ulEl.setAttribute("id", "cartDisplay");
+	var divEl = document.getElementById("cartContents");
+	var ulEl = document.createElement("ul");
 	for(var i in Cart.currentCart) {
 		var liEl  = document.createElement("li");
 		liEl.textContent = Cart.currentCart[i].name + ": " + Cart.currentCart[i].quantity;
 		ulEl.appendChild(liEl); 
 	} // loop for each item in standing JS cart
 	// Done: Add a new element to the cartContents div with that information
-  divEl.innerHTML = ''; 
-  divEl.appendChild(ulEl); // now put it all on the page
+	divEl.innerHTML = ""; 
+	divEl.appendChild(ulEl); // now put it all on the page
 
 } // end function updateCartPreview
 
